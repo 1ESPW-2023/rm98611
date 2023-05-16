@@ -1,35 +1,58 @@
-//Exemplo de funções
+// //Exemplo de Funções
 // const divElement = document.getElementById("div-box")
 
-// divElement.addEventListener("click", ()=>{
-//     console.log(divElement);
-// });
+// // divElement.addEventListener("click", ()=>{
+// //     console.log(divElement);
+// // });
 
 // divElement.addEventListener("click", mostraElemento);
-// function mostraElemento(){
-//    console.log(divElement)
+
+
+// function mostraElemento() {
+//     console.log(divElement)
 // }
-// function soma (){
+
+// function soma() {
 //     let n1 = 10
 //     let n2 = 5
-//     console.log(n1*n2)
+//     console.log(n1 + n2)
 // }
-//Recuperando elementos do HTML com querrySelector
-// const liElements = document.querySelectorAll("li");
-// //Convertendo NODE LIST em array com spread
-// const arrayElements =[...liElements];
+ 
+
+// //Recuperando elementos do HTML com querySelector
+// const liElements = document.querySelector("#item");
 // console.log(liElements);
+// const eyeButton = document.querySelector(".eye");
 
-// const arrayElements = [...document.querySelectorAll("li")];
-// arrayElements.map((el,key)=>{
-//     console.log(el.textContent.lastIndexOf("1"))
+// eyeButton.addEventListener("click",()=>{
 
-//       if(el.textContent.indexOf != (-1)) {
-//         el.textContent =`[${el.textContent}]`;
-//       }                                                
+//     const inputSenha = document  .querySelector("#idPass");
+
+//     if(inputSenha.getAttribute("type") == "password"){
+//         inputSenha.setAttribute("type","text");
+//         eyeButton.setAttribute("class","fa fa-eye-slash eye");
+//     }else{
+//         inputSenha.setAttribute("type","password");
+//         eyeButton.setAttribute("class","fa fa-eye eye");
+//     }
 // });
+
+
+// //Recuperando elementos do HTML com querySelectorAll
+// const liElements = document.querySelectorAll("li");
+// //CONVERTENDO NODE LIST EM ARRAY COM SPREAD
+// const arrayElements = [...liElements];
 // console.log(arrayElements);
 
+//CONVERTENDO NODE LIST EM ARRAY COM SPREAD
+// const arrayElements = [...document.querySelectorAll("li")];
+
+// arrayElements.map((el,key)=>{
+
+//     if (el.textContent.indexOf("1") != (-1)) {
+//         el.textContent = `[ ${el.textContent} ]`;
+//     }
+// });
 let tmp = 0;
 
 function mudaCor() {
@@ -84,12 +107,27 @@ function alteraBanner3() {
 
 alteraBanner1();
 
+const btnOnOff = document.querySelector(".conteudo button");
 
-function turnInOff() {
-    
-    
+btnOnOff.addEventListener("click", ()=>{
+    const imgLampada = document.querySelector(".conteudo img");
+    if(btnOnOff.textContent == "LIGAR"){
+        btnOnOff.textContent = "DESLIGAR";
+        imgLampada.src = "./img/pic_bulbon.gif";
+    }else{
+        btnOnOff.textContent = "LIGAR";
+        imgLampada.src = "./img/pic_bulboff.gif";
+    }
+});
 
-}
+// function turnInOff() {
+//     const btnOnOff = document.querySelector(".conteudo button");
 
-
-
+//     if(btnOnOff.textContent == "LIGAR"){
+//         btnOnOff.textContent = "DESLIGAR";
+//         imgLampada.src = "./img/pic_bulbon.gif";
+//     }else{
+//         btnOnOff.textContent = "LIGAR";
+//         imgLampada.src = "./img/pic_bulboff.gif";
+//     }
+// }
